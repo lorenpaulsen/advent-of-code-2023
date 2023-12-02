@@ -21,9 +21,9 @@ namespace AdventOfCode2023
             yield return new(new string(word.Reverse().ToArray()), index.ToString());
         }
 
-        public static async Task<int> Run()
+        public static async Task<int> Run(string input)
         {
-            var input = await File.ReadAllTextAsync("Day1\\input.txt");
+            //var input = await File.ReadAllTextAsync("Day1\\input.txt");
 
             return input
                 .Split(Environment.NewLine)
