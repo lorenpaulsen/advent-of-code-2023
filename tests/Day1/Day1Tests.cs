@@ -17,7 +17,7 @@ namespace AdventOfCode2023.Tests
             // Part1: 54632
             // Part2: 54019
 
-            var input = File.ReadAllText("Day1\\input.txt");
+            var input = File.ReadAllText("Day1/Input.txt");
 
             var actual = await Day1.Run(input);
             Assert.AreEqual(54019, actual);

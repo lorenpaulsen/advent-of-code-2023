@@ -23,8 +23,6 @@ namespace AdventOfCode2023
 
         public static async Task<int> Run(string input)
         {
-            //var input = await File.ReadAllTextAsync("Day1\\input.txt");
-
             return input
                 .Split(Environment.NewLine)
                 .Aggregate(0, (acc, line) =>
