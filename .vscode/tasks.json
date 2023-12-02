@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/advent-of-code-2023.sln",
+                "${workspaceFolder}/AdventOfCode2023.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/advent-of-code-2023.sln",
+                "${workspaceFolder}/AdventOfCode2023.sln",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/advent-of-code-2023.sln"
+                "${workspaceFolder}/AdventOfCode2023.sln"
             ],
             "problemMatcher": "$msCompile"
         }
