@@ -18,7 +18,7 @@ namespace AdventOfCode2023
         {
             yield return new(index.ToString(), index.ToString());
             yield return new(word, index.ToString());
-            yield return new(new string(word.Reverse().ToArray()), index.ToString());
+            yield return new(new(word.Reverse().ToArray()), index.ToString());
         }
 
         public static async Task<int> Run(string input)
@@ -29,13 +29,13 @@ namespace AdventOfCode2023
                 {
                     var firstDigit = stringNumberPairs
                         .ToLookup(pair => line.IndexOf(pair.Key), pair => pair.Value)
-                        .Where(pair => pair.Key >= 0)
-                        .MinBy(pair => pair.Key)!
+                        .Where(indexNumberPair => indexNumberPair.Key >= 0)
+                        .MinBy(indexNumberPair => indexNumberPair.Key)!
                         .Single();
 
                     var secondDigit = stringNumberPairs
                         .ToLookup(pair => line.LastIndexOf(pair.Key), pair => pair.Value)
-                        .MaxBy(pair => pair.Key)!
+                        .MaxBy(indexNumberPair => indexNumberPair.Key)!
                         .Single();
 
                     return acc + int.Parse($"{firstDigit}{secondDigit}");
