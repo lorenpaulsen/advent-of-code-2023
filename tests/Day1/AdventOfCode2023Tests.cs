@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 namespace AdventOfCode2023.Tests
 {
     [TestClass()]
-    public class Day1Tests
+    public class AdventOfCode2023Tests
     {
         [TestMethod()]
-        public async Task RunTestAsync()
+        public async Task Day1Part2()
         {
             // Part1: 54632
             // Part2: 54019
@@ -24,16 +24,23 @@ namespace AdventOfCode2023.Tests
         }
 
         [TestMethod()]
-        public void RunTestAsync2()
+        public void Day2Part1()
         {
             var input = File.ReadAllText("Day2/Input.txt");
 
-            var actual = Day2.RunPart1(input);
+            var totals = new Dictionary<string, int>()
+            {
+                ["red"] = 12,
+                ["green"] = 13,
+                ["blue"] = 14
+            };
+
+            var actual = Day2.RunPart1(input, totals);
             Assert.AreEqual(2406, actual);
         }
 
         [TestMethod()]
-        public void RunTestAsync3()
+        public void Day2Part2()
         {
             var input = File.ReadAllText("Day2/Input.txt");
 

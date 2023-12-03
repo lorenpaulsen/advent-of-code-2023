@@ -8,15 +8,8 @@ namespace AdventOfCode2023
 {
     public class Day2
     {
-        public static int RunPart1(string input)
+        public static int RunPart1(string input, Dictionary<string, int> totals)
         {
-            var totals = new Dictionary<string, int>()
-            {
-                ["red"] = 12,
-                ["green"] = 13,
-                ["blue"] = 14
-            };
-
             return input
              .Split(Environment.NewLine)
              .Select(x => x.Split(":"))
